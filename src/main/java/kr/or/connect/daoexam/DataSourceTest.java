@@ -21,7 +21,7 @@ public class DataSourceTest {
 		try {
 			conn = ds.getConnection();
 			if(conn != null)
-				System.out.println("立加 己傍^^");
+				System.out.println("鞝戩啀 靹标车^^");
 		}catch (Exception e) {
 			e.printStackTrace();
 		}finally {
