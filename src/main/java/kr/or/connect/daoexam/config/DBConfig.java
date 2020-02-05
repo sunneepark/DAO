@@ -18,7 +18,7 @@ public class DBConfig {
     private String username = "root";
     private String password = "wlzheoqkr1!";
 
-/*    @Bean
+    @Bean
     public DataSource dataSource() {
     	BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName(driverClassName);
@@ -26,7 +26,7 @@ public class DBConfig {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
         return dataSource;
-    }*/
+    }
     
     @Bean
     public Connection Connection() {
@@ -40,9 +40,17 @@ public class DBConfig {
         try {
 			conn = dataSource.getConnection();
 			if(conn == null)
-				System.out.println("DB ¿¬°á ½ÇÆÐ");
+				System.out.println("DB ì—°ê²° ì„±ê³µ");
 		}catch (Exception e) {
 			e.printStackTrace();
+		}finally {
+			if(conn != null) {
+				try {
+					conn.close();
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
 		}
         
         return conn;

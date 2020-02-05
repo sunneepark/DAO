@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import kr.or.connect.daoexam.config.ApplicationConfig;
 
-//data insert 抗矫
+//data insert 鞓堨嫓
 public class DataSourceTest2 {
 
 	public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class DataSourceTest2 {
 		
 		try {
 			if(conn != null)
-				System.out.println("立加 己傍^^");
+				System.out.println("鞐瓣舶 靹标车^^");
 		}catch (Exception e) {
 			e.printStackTrace();
 		}finally {
